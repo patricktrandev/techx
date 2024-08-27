@@ -1,0 +1,62 @@
+version: "3.7"
+services:
+  mysql8-container:
+    container_name: mysql8-container
+    image: mysql:8.0.36
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: patrick123
+      MYSQL_DATABASE: techx
+    ports:
+      - 3306:3306
+
+    networks:
+      - techx-network
+
+  phpmyadmin8-container:
+    #intel host
+    image: phpmyadmin/phpmyadmin
+    #image: arm64v8/phpmyadmin #choose this if you are running on Mac Apple Silicon(M1, M2,...)
+    container_name: phpmyadmin8-container
+    restart: always
+    depends_on:
+      - mysql8-container
+    ports:
+      - "8100:80" #port mapping
+    environment:
+      PMA_HOST: mysql8-container #phpMyAdmin Host, PMA = PHP My Amin
+      PMA_PORT: 3309
+      UPLOAD_LIMIT: 500M
+    networks:
+      - techx-network
+
+  redis-container:
+    image: docker.io/redis:7.2.3
+    container_name: redis-container
+    restart: always
+    ports:
+      - "6379:6379" # Port mapping for Redis, you can change the host port as needed
+    volumes:
+      - ./redis-data:/data # Mount a volume for Redis data persistence
+    networks:
+      - techx-network
+
+#docker-compose -f ./deployment.yaml down
+
+#docker-compose -f ./deployment.yaml rm -s -f mysql8-container
+#docker-compose -f ./deployment.yaml up -d mysql8-container
+
+#docker-compose -f ./deployment.yaml rm -s -f phpmyadmin8-container
+#docker-compose -f ./deployment.yaml up -d phpmyadmin8-container
+
+#docker-compose -f ./deployment.yaml rm -s -f techx-spring-container
+#docker-compose -f ./deployment.yaml up -d techx-spring-container
+#docker logs techx-spring-container
+
+#docker-compose -f ./deployment.yaml rm -s -f redis-container
+#docker-compose -f ./deployment.yaml up -d redis-container
+
+networks:
+  techx-network:
+    name: techx-network
+    driver: bridge
