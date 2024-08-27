@@ -1,7 +1,5 @@
 ## TechX - Ecommerce Online Shopping Store
 
----
-
 Welcome to TechX, a sophisticated Ecommerce online shopping platform built to elevate customer shopping experience through the power of modern web technologies. TechX combines the robust backend capabilities of Spring Boot with the dynamic frontend features of Angular, delivering a high-performance, user-friendly, and scalable solution for online retail.
 
 **_Tentative technologies and frameworks_**
@@ -11,8 +9,6 @@ Welcome to TechX, a sophisticated Ecommerce online shopping platform built to el
 - Angular
 - Redis
 - Mysql
-
----
 
 ### Key features
 
@@ -44,9 +40,8 @@ Welcome to TechX, a sophisticated Ecommerce online shopping platform built to el
 
 ![](https://res.cloudinary.com/dctb1eocj/image/upload/v1724717442/api/Capture7_qjkcyo.png)
 
----
+### Getting started
 
-**Getting started**
 1.Get the latest source code 2. Run this command to setup database with docker
 
 `docker-compose -f ./deployment.yaml up`
@@ -66,8 +61,9 @@ Please provide these property to run Forgot Password feature
 
 ---
 
-**Screenshots**
-| User| Administrator |
-| :----- | :---------- |
-| ![](https://res.cloudinary.com/dctb1eocj/image/upload/v1724719213/api/Capture.8PNG_qwlfms.png)|![](https://res.cloudinary.com/dctb1eocj/image/upload/v1724719217/api/Capture10_g6yvq7.png) |
-| ![](https://res.cloudinary.com/dctb1eocj/image/upload/v1724719215/api/Capture9_hb3lv1.png)|![](https://res.cloudinary.com/dctb1eocj/image/upload/v1724719218/api/Capture11_pfj2nl.png) |
+### Screenshots
+
+| User                                                                                           | Administrator                                                                               |
+| :--------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------ |
+| ![](https://res.cloudinary.com/dctb1eocj/image/upload/v1724719213/api/Capture.8PNG_qwlfms.png) | ![](https://res.cloudinary.com/dctb1eocj/image/upload/v1724719217/api/Capture10_g6yvq7.png) |
+| ![](https://res.cloudinary.com/dctb1eocj/image/upload/v1724719215/api/Capture9_hb3lv1.png)     | ![](https://res.cloudinary.com/dctb1eocj/image/upload/v1724719218/api/Capture11_pfj2nl.png) |
