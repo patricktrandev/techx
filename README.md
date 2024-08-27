@@ -42,7 +42,8 @@ Welcome to TechX, a sophisticated Ecommerce online shopping platform built to el
 
 ### Getting started
 
-1.Get the latest source code 2. Run this command to setup database with docker
+1. Get the latest source code 
+2. Run this command to setup database with docker
 
 `docker-compose -f ./deployment.yaml up`
 
