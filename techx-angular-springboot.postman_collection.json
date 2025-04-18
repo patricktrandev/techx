@@ -1,0 +1,1778 @@
+{
+	"info": {
+		"_postman_id": "a10b68b3-b19c-43bd-a630-5b4bfa8e0371",
+		"name": "shop-app-angular-springboot",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37270294"
+	},
+	"item": [
+		{
+			"name": "categories",
+			"item": [
+				{
+					"name": "getAllCategories",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJwaG9uZU51bWJlciI6IjA5MzkzOTQyMjEiLCJ1c2VySWQiOjYsImVtYWlsIjoiZzd3Y3pAcm93ZHlkb3cuY29tIiwic3ViIjoiMDkzOTM5NDIyMSIsImV4cCI6MTcyNTExMjUzOH0.GXJHDiLCkv4Gw_J_K5-ddgdRboxvRN1NlVZwGLVkFA8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/categories",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createCategory",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJwaG9uZU51bWJlciI6IjA5MzkzOTQyMjAiLCJ1c2VySWQiOjEsImVtYWlsIjoidGllbmRldmNvZmZlZUBnbWFpbC5jb20iLCJzdWIiOiIwOTM5Mzk0MjIwIiwiZXhwIjoxNzI1MTM3NzUyfQ.QjSbjd2Ixc-RB0FBQ7mxBMDbNMm1BlyuKa0KZsXMD0U",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Laptops\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/v1/categories",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateCategory",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJwaG9uZU51bWJlciI6IjAxMjM0NTY1NzkiLCJzdWIiOiIwMTIzNDU2NTc5IiwiZXhwIjoxNzI0MTc5NTAyfQ.eamr3_0mxoacJAiZfJjaEWxyRID-_r-XcQQIKAgy9N8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"IPad\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/categories/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"categories",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteCategory",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/categories/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"categories",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "products",
+			"item": [
+				{
+					"name": "getProductDetailsById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/products/917",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"products",
+								"917"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getProductListByListId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/products/by-ids?ids=1,3,4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"products",
+								"by-ids"
+							],
+							"query": [
+								{
+									"key": "ids",
+									"value": "1,3,4"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getProductImageByProductId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/products/1/images-list",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"products",
+								"1",
+								"images-list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllProducts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/v1/products?limit=12&page=0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"products"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "12"
+								},
+								{
+									"key": "keyword",
+									"value": "clock",
+									"disabled": true
+								},
+								{
+									"key": "category_id",
+									"value": "2",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getImage",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/products/images/8945720a-333c-4090-8d48-eba997435854_Apple_new-macbookair-wallpaper-screen_11102020_big.jpg.large.jpg",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"products",
+								"images",
+								"8945720a-333c-4090-8d48-eba997435854_Apple_new-macbookair-wallpaper-screen_11102020_big.jpg.large.jpg"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createProduct",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJwaG9uZU51bWJlciI6IjA5MzkzOTQyMjAiLCJ1c2VySWQiOjEsImVtYWlsIjoidGllbmRldmNvZmZlZUBnbWFpbC5jb20iLCJzdWIiOiIwOTM5Mzk0MjIwIiwiZXhwIjoxNzI1MTM3NzUyfQ.QjSbjd2Ixc-RB0FBQ7mxBMDbNMm1BlyuKa0KZsXMD0U",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"price\":99.435,\r\n    \"thumbnail\":\"\",\r\n    \"description\":\"PowerMax Pro: The Ultimate Laptop Experience. PowerMax Pro: The Ultimate Laptop Experience\",\r\n    \"category_id\":3,\r\n    \"name\":\"PowerMax Pro: The Ultimate Laptop Experience\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/v1/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createProduct Copy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"ipad pro 2023\",\r\n    \"price\":789.123,\r\n    \"thumbnail\":\"\",\r\n    \"descripition\":\"this is test product\",\r\n    \"category_id\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/products/generateFakeProducts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"products",
+								"generateFakeProducts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "uploadImage",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJwaG9uZU51bWJlciI6IjA5MzkzOTQyMjAiLCJ1c2VySWQiOjEsImVtYWlsIjoidGllbmRldmNvZmZlZUBnbWFpbC5jb20iLCJzdWIiOiIwOTM5Mzk0MjIwIiwiZXhwIjoxNzI1MTM3NzUyfQ.QjSbjd2Ixc-RB0FBQ7mxBMDbNMm1BlyuKa0KZsXMD0U",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "files",
+									"type": "file",
+									"src": [
+										"/C:/Users/admin/Downloads/Apple_new-macbookair-wallpaper-screen_11102020_big.jpg.large.jpg",
+										"/C:/Users/admin/Downloads/images (9).jpg",
+										"/C:/Users/admin/Downloads/images (8).jpg",
+										"/C:/Users/admin/Downloads/images (7).jpg",
+										"/C:/Users/admin/Downloads/refurb-mbp13-space-m1-2020_GEO_CA.jpg"
+									]
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/v1/products/uploads/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"products",
+								"uploads",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "saveimage",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJwaG9uZU51bWJlciI6IjA5MzkzOTQyMjAiLCJ1c2VySWQiOjEsImVtYWlsIjoidGllbmRldmNvZmZlZUBnbWFpbC5jb20iLCJzdWIiOiIwOTM5Mzk0MjIwIiwiZXhwIjoxNzI1MTM3NzUyfQ.QjSbjd2Ixc-RB0FBQ7mxBMDbNMm1BlyuKa0KZsXMD0U",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "files",
+									"type": "file",
+									"src": [
+										"/C:/Users/admin/Downloads/Apple_new-macbookair-wallpaper-screen_11102020_big.jpg.large.jpg",
+										"/C:/Users/admin/Downloads/images (9).jpg",
+										"/C:/Users/admin/Downloads/images (8).jpg",
+										"/C:/Users/admin/Downloads/images (7).jpg",
+										"/C:/Users/admin/Downloads/refurb-mbp13-space-m1-2020_GEO_CA.jpg"
+									]
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/v1/products/save-image/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"products",
+								"save-image",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "uploadImage Copy",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJwaG9uZU51bWJlciI6IjAxMjM0NTY1NzkiLCJ1c2VySWQiOjUsInN1YiI6IjAxMjM0NTY1NzkiLCJleHAiOjE3MjQ4NDM3MDF9.D-V3XPTXZhUG2MXdexhA7BcDIGi2U4Sf4_FJQrN1F0w",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "files",
+									"type": "file",
+									"src": [
+										"/C:/Users/admin/Downloads/Apple_new-macbookair-wallpaper-screen_11102020_big.jpg.large.jpg",
+										"/C:/Users/admin/Downloads/images (9).jpg",
+										"/C:/Users/admin/Downloads/images (8).jpg",
+										"/C:/Users/admin/Downloads/images (7).jpg",
+										"/C:/Users/admin/Downloads/refurb-mbp13-space-m1-2020_GEO_CA.jpg"
+									]
+								},
+								{
+									"key": "product",
+									"contentType": "application/json",
+									"type": "file",
+									"src": []
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/products/products-upload",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"products",
+								"products-upload"
+							],
+							"query": [
+								{
+									"key": "files",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateProduct",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJwaG9uZU51bWJlciI6IjAxMjM0NTY1NzkiLCJ1c2VySWQiOjUsInN1YiI6IjAxMjM0NTY1NzkiLCJleHAiOjE3MjQ3NjIxMDV9.i6HSL4s5Yx_4GQ_oFeKbNLsLQ9r4XLhpfCb3-HP6QyI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"price\":99.435,\r\n    \"thumbnail\":\"\",\r\n    \"description\":\"new ipad air 2023\",\r\n    \"category_id\":2,\r\n    \"name\":\"ipad air 256gb\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/products/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"products",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteProduct",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJwaG9uZU51bWJlciI6IjAxMjM0NTY1NzkiLCJ1c2VySWQiOjUsInN1YiI6IjAxMjM0NTY1NzkiLCJleHAiOjE3MjQ3Nzc1MzZ9.hJlPQEVmo7vC9KCrfIOnBNX5e-3ES4vitYgAi1rabU0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/products/15",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"products",
+								"15"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getImageUpload",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/products/images/c5bb692a-f867-485f-bb05-38eaea989750_images (4).jpg",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"products",
+								"images",
+								"c5bb692a-f867-485f-bb05-38eaea989750_images (4).jpg"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "registerUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fullname\":\"John\",\r\n    \"address\":\"178 Pham Van bach\",\r\n    \"phone_number\":\"0383459776\",\r\n    \"password\":\"0383459776\",\r\n    \"confirm_password\":\"0383459776\",\r\n    \"date_of_birth\":\"1995-10-20\",\r\n    \"facebook_account_id\":0,\r\n    \"google_account_id\":0,\r\n    \"role_id\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/v1/users/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateUser",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJwaG9uZU51bWJlciI6IjA5MzkzOTQyMjAiLCJ1c2VySWQiOjI4LCJzdWIiOiIwOTM5Mzk0MjIwIiwiZXhwIjoxNzI0Njk0NjA1fQ.4PBCm25T1QQfdSQPMEqE7m4dd5Kn9P0ungiRa9J5ns8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fullname\":\"Minh Duy\",\r\n    \"address\":\"178 Pham Van bach\",\r\n    \"phone_number\":\"0939394220\",\r\n    \r\n    \"date_of_birth\":\"1995-10-20\",\r\n    \"facebook_account_id\":0,\r\n    \"google_account_id\":0,\r\n    \"role_id\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateRole",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJwaG9uZU51bWJlciI6IjA5MzkzOTQyMjEiLCJ1c2VySWQiOjYsImVtYWlsIjoiZzd3Y3pAcm93ZHlkb3cuY29tIiwic3ViIjoiMDkzOTM5NDIyMSIsImV4cCI6MTcyNTExMjUzOH0.GXJHDiLCkv4Gw_J_K5-ddgdRboxvRN1NlVZwGLVkFA8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n    \r\n    \"role\":2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/v1/roles/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"roles",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "loginUser",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJwaG9uZU51bWJlciI6IjA5MzkzOTQyMjEiLCJ1c2VySWQiOjYsImVtYWlsIjoiZzd3Y3pAcm93ZHlkb3cuY29tIiwic3ViIjoiMDkzOTM5NDIyMSIsImV4cCI6MTcyNTExMjUzOH0.GXJHDiLCkv4Gw_J_K5-ddgdRboxvRN1NlVZwGLVkFA8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n    \"phone_number\":\"0383459776\",\r\n    \"password\":\"0383459776\",\r\n    \"role_id\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/v1/users/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getUserDetails By Token",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJwaG9uZU51bWJlciI6IjA5MzkzOTQyMjEiLCJlbWFpbCI6Imx1Y3lqZXFvQHBvbGthcm9hZC5uZXQiLCJ1c2VySWQiOjIsImV4cCI6MTcyNTIyODI1MX0.CgnF07kDzT3OAGb63d0wYyaylMANLfDCHoGjVsmhAJUV1W7f-Gm0raHNp0DwHYDv9niJXZiZgs-7xkameJJPDA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/v1/users/details",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"details"
+							],
+							"query": [
+								{
+									"key": "Au",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getUserByAdmin",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJwaG9uZU51bWJlciI6IjA5MzkzOTQyMjUiLCJ1c2VySWQiOjYsImVtYWlsIjoidml4b3czOTU4OUBkYXlwZXkuY29tIiwic3ViIjoiMDkzOTM5NDIyNSIsImV4cCI6MTcyNTMwNzk3Nn0.RUOIQP5ekYruNhxc_D7AWnfXw3zwXnB71rJ6SLePI9p8T6b0Hczb8odDocZEsUhUEftr_sBuqA29qmnl0tMR-A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/v1/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"users"
+							],
+							"query": [
+								{
+									"key": "keyword",
+									"value": "0123456679",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getUserDetailsById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJwaG9uZU51bWJlciI6IjA5MzkzOTQyMjEiLCJlbWFpbCI6Imx1Y3lqZXFvQHBvbGthcm9hZC5uZXQiLCJ1c2VySWQiOjIsImV4cCI6MTcyNTIyODI1MX0.CgnF07kDzT3OAGb63d0wYyaylMANLfDCHoGjVsmhAJUV1W7f-Gm0raHNp0DwHYDv9niJXZiZgs-7xkameJJPDA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/v1/users/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteUser",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJwaG9uZU51bWJlciI6IjA5MzkzOTQyMjUiLCJ1c2VySWQiOjYsImVtYWlsIjoidml4b3czOTU4OUBkYXlwZXkuY29tIiwic3ViIjoiMDkzOTM5NDIyNSIsImV4cCI6MTcyNTMwNzk3Nn0.RUOIQP5ekYruNhxc_D7AWnfXw3zwXnB71rJ6SLePI9p8T6b0Hczb8odDocZEsUhUEftr_sBuqA29qmnl0tMR-A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/v1/users/7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "testredis",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJwaG9uZU51bWJlciI6IjAxMjM0NTY1NzkiLCJ1c2VySWQiOjUsInN1YiI6IjAxMjM0NTY1NzkiLCJleHAiOjE3MjQ5MzY5MjZ9.XOEO6bgo-86YFh_22HHwrdPdVupXIslDB9ThuevZBDc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/v1/products/test/test-val",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"products",
+								"test",
+								"test-val"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "forgotPasword",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"vixow39589@daypey.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/v1/users/reset/send-email",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"reset",
+								"send-email"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "resetPassword",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n    \"new_password\":\"hello\",\r\n    \"email\":\"g7wcz@rowdydow.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/v1/users/reset-password",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"reset-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "checkTokenValid",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"otp\":\"138744\",\r\n    \"email\":\"g7wcz@rowdydow.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/v1/users/token-valid",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"token-valid"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "changePassword",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJwaG9uZU51bWJlciI6IjA5MzkzOTQyMjAiLCJ1c2VySWQiOjQsImVtYWlsIjoidml4b3czOTU4OUBkYXlwZXkuY29tIiwic3ViIjoiMDkzOTM5NDIyMCIsImV4cCI6MTcyNTA0MjY1M30.p0jfky__FfZr_g_zLhLLeYtraoE2b8aXrm9TPNT4mls",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_id\":4,\r\n    \"new_password\":\"helloworld2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/v1/users/change-password",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"change-password"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "orders",
+			"item": [
+				{
+					"name": "createOrder",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJwaG9uZU51bWJlciI6IjAzODM0NTk3NzYiLCJ1c2VySWQiOjgsInN1YiI6IjAzODM0NTk3NzYiLCJleHAiOjE3MjUzMTA5MTB9.Dopw-rW_l2HItGbMZLAYdNiDMLBbh-PwqRFLjy7YN40Qw5yvmyZOG_4xBlxn7SzesY9di7BkuJ5oHsdAarHHyg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_id\":7,\r\n    \"fullname\":\"John12\",\r\n    \"email\":\"john23@gmail.com\",\r\n    \"phone_number\":\"123468779\",\r\n    \"shipping_address\":\"179 Luzhouwei, Luzhou district, Taipei\",\r\n    \"note\":\"be careful, broken item\",\r\n    \"total_payment\":599.45,\r\n    \"shipping_method\":\"express\",\r\n    \"payment_method\":\"cod\",\r\n    \"cart_items\":[\r\n        {\r\n            \"product_id\":1,\r\n            \"quantity\":3\r\n        }\r\n\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/v1/orders",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateOrder",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJwaG9uZU51bWJlciI6IjAxMjM0NTY3NzkiLCJzdWIiOiIwMTIzNDU2Nzc5IiwiZXhwIjoxNzIzOTA1OTQzfQ.bFL77qCLy2CnJsC7c9EM1hQQXlbHEfc9J78YASriLbQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_id\":3,\r\n    \"fullname\":\"John Doe updated\",\r\n    \"email\":\"john123@gmail.com\",\r\n    \"phone_number\":\"123456799\",\r\n    \"address\":\"179 Luzhouwei, Luzhou district, Taipei\",\r\n    \"note\":\"be careful, broken item test updated\",\r\n    \"shipping_method\":\"express\",\r\n    \"payment_method\":\"cod\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/orders/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"orders",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateOrderStatus",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJwaG9uZU51bWJlciI6IjAxMjM0NTY1NzkiLCJ1c2VySWQiOjUsInN1YiI6IjAxMjM0NTY1NzkiLCJleHAiOjE3MjQ3Nzc1MzZ9.hJlPQEVmo7vC9KCrfIOnBNX5e-3ES4vitYgAi1rabU0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"status\":\"PROCESSING\"\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/orders/14/status",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"orders",
+								"14",
+								"status"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getOrderById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJwaG9uZU51bWJlciI6IjAzODM0NTk3NzYiLCJ1c2VySWQiOjExLCJzdWIiOiIwMzgzNDU5Nzc2IiwiZXhwIjoxNzI0NzU4MzAwfQ.8c50boffUXh4BY27mzeFYXJpHLYYNOw6C4ZD3tcqANk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/orders/order/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"orders",
+								"order",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getOrderBykeyword",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJwaG9uZU51bWJlciI6IjAxMjM0NTY1NzkiLCJ1c2VySWQiOjUsInN1YiI6IjAxMjM0NTY1NzkiLCJleHAiOjE3MjQ3NTY2MjN9.iudA7gP1FaaXaYQoyYDRFo6ddSUY_57v5_j5GRLImxc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/orders/get-orders-by-keyword",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"orders",
+								"get-orders-by-keyword"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "limit",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "keyword",
+									"value": "b3542ab0-ebb2-4f47-bcfe-a04c614a835c",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getOrderByUserId",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJwaG9uZU51bWJlciI6IjAzODM0NTk3NzYiLCJ1c2VySWQiOjgsInN1YiI6IjAzODM0NTk3NzYiLCJleHAiOjE3MjUzMTA5MTB9.Dopw-rW_l2HItGbMZLAYdNiDMLBbh-PwqRFLjy7YN40Qw5yvmyZOG_4xBlxn7SzesY9di7BkuJ5oHsdAarHHyg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/v1/orders/8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"orders",
+								"8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteOrderById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJwaG9uZU51bWJlciI6IjAxMjM0NTY1NzkiLCJ1c2VySWQiOjUsInN1YiI6IjAxMjM0NTY1NzkiLCJleHAiOjE3MjQ3NzMyNDZ9.j7oG_oM7QksuQVj3cEoly2-8L3gip77WmCNYQjHZCJ8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/orders/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"orders",
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "order_details",
+			"item": [
+				{
+					"name": "createOrderDetails",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"order_id\":2,\r\n    \"product_id\":7,\r\n    \"price\":4.95,\r\n    \"number_of_product\":1,\r\n    \"total_payment\":4.95,\r\n    \"color\":\"#fff00ff\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/order_details",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"order_details"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateOrderDetails",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"order_id\":2,\r\n    \"product_id\":1,\r\n    \"email\":\"john123@gmail.com\",\r\n    \"price\":12.33,\r\n    \"number_of_product\":2,\r\n    \"total_payment\":123.45,\r\n    \"color\":\"#fff00ff\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/order_details/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"order_details",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getOrderDetailsByOrderId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/order_details/order/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"order_details",
+								"order",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getOrderDetailsById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/order_details/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"order_details",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteOrderDetailsById",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/order_details/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"order_details",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "roles",
+			"item": [
+				{
+					"name": "getAllRoles",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/roles",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"roles"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "coupons",
+			"item": [
+				{
+					"name": "createCoupon",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJwaG9uZU51bWJlciI6IjA5MzkzOTQyMjAiLCJ1c2VySWQiOjEsImVtYWlsIjoidGllbmRldmNvZmZlZUBnbWFpbC5jb20iLCJzdWIiOiIwOTM5Mzk0MjIwIiwiZXhwIjoxNzI1MTkwNzM5fQ.Lx1hccUG_QDTnnxVmu7xqmm5bDUv2YlAfFXjFte0UYg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"coupon\":\"SUMMER\",\r\n    \"attribbute\":\"applicable_date\",\r\n    \"operator\":\"BEFORE\",\r\n    \"value\":\"2023-12-25\",\r\n    \"discount_amount\":\"10\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/v1/coupons",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"coupons"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllCoupons",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJwaG9uZU51bWJlciI6IjA5MzkzOTQyMjAiLCJ1c2VySWQiOjEsImVtYWlsIjoidGllbmRldmNvZmZlZUBnbWFpbC5jb20iLCJzdWIiOiIwOTM5Mzk0MjIwIiwiZXhwIjoxNzI1MTkwNzM5fQ.Lx1hccUG_QDTnnxVmu7xqmm5bDUv2YlAfFXjFte0UYg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"coupon\":\"SUMMER\",\r\n    \"attribbute\":\"applicable_date\",\r\n    \"operator\":\"BEFORE\",\r\n    \"value\":\"2023-12-25\",\r\n    \"discount_amount\":\"10\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/v1/coupons",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"coupons"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getCouponById",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJwaG9uZU51bWJlciI6IjA5MzkzOTQyMjAiLCJ1c2VySWQiOjEsImVtYWlsIjoidGllbmRldmNvZmZlZUBnbWFpbC5jb20iLCJzdWIiOiIwOTM5Mzk0MjIwIiwiZXhwIjoxNzI1MTkwNzM5fQ.Lx1hccUG_QDTnnxVmu7xqmm5bDUv2YlAfFXjFte0UYg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"coupon\":\"SUMMER\",\r\n    \"attribbute\":\"applicable_date\",\r\n    \"operator\":\"BEFORE\",\r\n    \"value\":\"2023-12-25\",\r\n    \"discount_amount\":\"10\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/v1/coupons/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"coupons",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "calculateDiscount",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"coupon\":\"SUMMER\",\r\n    \"attribbute\":\"applicable_date\",\r\n    \"operator\":\"BEFORE\",\r\n    \"value\":\"2023-12-25\",\r\n    \"discount_amount\":\"10\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/v1/coupons/calculate?coupon=HEAVEN&amount=200",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"coupons",
+								"calculate"
+							],
+							"query": [
+								{
+									"key": "coupon",
+									"value": "HEAVEN"
+								},
+								{
+									"key": "amount",
+									"value": "200"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteCouponById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJwaG9uZU51bWJlciI6IjA5MzkzOTQyMjAiLCJ1c2VySWQiOjEsImVtYWlsIjoidGllbmRldmNvZmZlZUBnbWFpbC5jb20iLCJzdWIiOiIwOTM5Mzk0MjIwIiwiZXhwIjoxNzI1MTkwNzM5fQ.Lx1hccUG_QDTnnxVmu7xqmm5bDUv2YlAfFXjFte0UYg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"coupon\":\"SUMMER\",\r\n    \"attribbute\":\"applicable_date\",\r\n    \"operator\":\"BEFORE\",\r\n    \"value\":\"2023-12-25\",\r\n    \"discount_amount\":\"10\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/v1/coupons/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"coupons",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/connectors",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"connectors"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

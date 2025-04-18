@@ -1,0 +1,79 @@
+services:
+  mysql8-container:
+    container_name: mysql8-container
+    image: mysql:8.0.36
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: myadmin123
+      MYSQL_DATABASE: techx
+    ports:
+      - 3307:3306
+    volumes:
+      - mysql_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD-SHELL", "mysqladmin ping -uroot -pmyadmin123"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 40s
+    networks:
+      - techx-network
+
+  phpmyadmin8-container:
+    image: phpmyadmin/phpmyadmin
+    container_name: phpmyadmin8-container
+    restart: always
+    depends_on:
+      - mysql8-container
+    ports:
+      - "8100:80" #port mapping
+    environment:
+      PMA_HOST: mysql8-container #phpMyAdmin Host, PMA = PHP My Amin
+      MYSQL_ROOT_PASSWORD: myadmin123
+      UPLOAD_LIMIT: 500M
+    networks:
+      - techx-network
+
+  redis-container:
+    image: docker.io/redis:7.2.3
+    container_name: redis-container
+    restart: always
+    ports:
+      - "6378:6379" # Port mapping for Redis, you can change the host port as needed
+    volumes:
+      - redis-data:/data
+    networks:
+      - techx-network
+  backend-app:
+    image: patrickdevcoffee/techx-backend
+    ports:
+      - "8081:8081"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql8-container:3306/techx?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC&autoReconnect=true&socketTimeout=30000
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: myadmin123
+      SPRING_JPA_HIBERNATE_DDL_AUTO: update
+      REDIS_HOST: redis-container
+      REDIS_PORT: 6379
+    depends_on:
+      mysql8-container:
+        condition: service_healthy
+    networks:
+      - techx-network
+  frontend-app:
+    image: patrickdevcoffee/techx-frontend
+    container_name: techx-frontend
+    ports:
+      - "3000:80"
+    networks:
+      - techx-network
+    depends_on:
+      - backend-app
+    restart: unless-stopped
+volumes:
+  mysql_data:
+  redis-data:
+
+networks:
+  techx-network:
+    driver: bridge
