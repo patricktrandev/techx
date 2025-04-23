@@ -1,6 +1,6 @@
 ## TechX - Ecommerce Online Shopping Store
 
-Welcome to TechX, a sophisticated Ecommerce online shopping platform built to elevate customer shopping experience through the power of modern web technologies. TechX combines the robust backend capabilities of Spring Boot with the dynamic frontend features of Angular, delivering a high-performance, user-friendly, and scalable solution for online retail.
+Welcome to TechX, a scalable online shopping platform using Java Spring Boot, Angular, and MySQL. Integrated Spring Security for authentication and authorization, and implemented OTP-based password recovery using Redis for secure, time-sensitive token storage. Containerized the application with Docker and streamlined deployments via GitLab CI/CD.
 
 **_Tentative technologies and frameworks_**
 
@@ -9,6 +9,13 @@ Welcome to TechX, a sophisticated Ecommerce online shopping platform built to el
 - Angular
 - Redis
 - Mysql
+- Docker
+
+Swagger Docs API `http://14.225.218.30:8081/swagger-ui/index.html`
+
+
+### Deploy on ubuntu server
+`http://14.225.218.30/`
 
 ### Key features
 
@@ -40,25 +47,18 @@ Welcome to TechX, a sophisticated Ecommerce online shopping platform built to el
 
 ![](https://res.cloudinary.com/dctb1eocj/image/upload/v1724717442/api/Capture7_qjkcyo.png)
 
+**_Gitlab CI/CD_**
+
+![](https://res.cloudinary.com/dctb1eocj/image/upload/v1745392445/api/ci_file_xqhgwx.jpg)
+
+![](https://res.cloudinary.com/dctb1eocj/image/upload/v1745392446/api/cicd_yyj1jy.jpg)
+
 ### Getting started
 
 1. Get the latest source code 
-2. Run this command to setup database with docker
+2. Run this command to setup project with docker
 
-`docker-compose -f ./deployment.yaml up`
-
-then starting techx-backend as server.
-
-Swagger Docs API `http://localhost:8081/swagger-ui/index.html`
-
-_For Angular set up, don't forget run `npm i` before run techx-client_
-
-Please provide these property to run Forgot Password feature
-
-`spring.mail.host=smtp.gmail.com`
-`spring.mail.port=587`
-`spring.mail.username=your_email`
-`spring.mail.password=your_app_password`
+`docker-compose up -d`
 
 ---
 
